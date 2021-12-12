@@ -1,0 +1,14 @@
+#Using Decorator calculate number of occurrences of character 'A'
+def deco_ip(func):
+    def inner():
+        st1=func()
+        return st1.count('A')
+    return inner
+
+
+@deco_ip
+def ip():
+    st = str(input('ENTETR NAME--:'))
+    return st
+
+print(ip())
